@@ -34,6 +34,26 @@ Uygulama çalıştıktan sonra aşağıdaki el hareketleriyle bilgisayarınızı
 Projeyi yerel makinenizde çalıştırmak için sisteminizde **Python 3.x** yüklü olmalıdır. Ayrıca bir web kamerasına ihtiyacınız olacaktır.
 
 **1. Depoyu klonlayın:**
-```bash
-git clone [https://github.com/KULLANICI_ADIN/sihirli-fare.git](https://github.com/KULLANICI_ADIN/sihirli-fare.git)
-cd sihirli-fare
+
+2. Gerekli kütüphaneleri yükleyin:
+
+Bash
+pip install opencv-python mediapipe pyautogui numpy
+3. Projeyi çalıştırın:
+
+Bash
+python main.py
+(Not: Dosya adınız farklıysa main.py kısmını kendi dosya adınızla değiştirin.)
+
+⚙️ Teknik Detaylar
+OpenCV: Kamera görüntüsünü almak ve ekrana bilgi yazdırmak için kullanıldı.
+
+MediaPipe: El iskeletini (21 farklı landmark noktası) yüksek doğrulukla ve gerçek zamanlı olarak tespit etmek için kullanıldı.
+
+PyAutoGUI: İşletim sistemine klavye ve fare komutları göndermek için kullanıldı. Arayüzün çökmesini engellemek adına FAILSAFE özellikleri entegre edildi.
+
+NumPy: Fare koordinatlarını kamera çözünürlüğünden, ekran çözünürlüğüne oranlamak (interp) için kullanıldı.
+
+🛑 Çıkış Yapmak
+Uygulamayı kapatmak için kamera penceresi aktifken klavyenizden 'q' tuşuna basmanız yeterlidir.
+
